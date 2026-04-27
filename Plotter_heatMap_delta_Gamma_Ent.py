@@ -32,11 +32,7 @@ contour1 = ax1.contourf(Gamma_e, delta_a_unique, P_grid, origin='lower',
                     levels=np.linspace(0, scale, 100), cmap='hot_r')
 ax1.set_xscale('log')
 ax1.set_ylabel(r'$|\delta_a|/\Gamma_f$', labelpad=5, fontsize=10)
-# ax1.set_xlabel(r'$\Gamma_e/\Gamma_f$', labelpad=5, fontsize=16)
-# cbar1 = fig.colorbar(contour1, ax=ax1, orientation="vertical")
-# cbar1.set_label(r'$P_f^{max}$', labelpad=1, fontsize=13)
-# cbar1.set_ticks(np.arange(0,scale,0.2))
-# cbar1.set_ticklabels(np.round(np.arange(0,scale,0.2),2))
+
 
 ax1.text(0.03, 0.97, '(a)', transform=ax1.transAxes,
             fontsize=10, verticalalignment='top', color='black', weight='bold')
@@ -51,7 +47,6 @@ cs = ax1.contour(
     linewidths=0.8
 )
 ax1.clabel(cs, inline=True, fontsize=10, fmt='%.2f')
-# ax1.set_title(r'Entangled, No-Delay $\delta_f = 0$', fontsize=14, pad=10)
 
 
 
